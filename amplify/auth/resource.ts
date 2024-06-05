@@ -10,24 +10,16 @@ export const auth = defineAuth({
     externalProviders: {
       oidc: [
         {
-          name: 'MicrosoftEntraID',
-          attributeRequestMethod: 'GET',
+          name: 'Auth0',
           clientId: secret('client-id'),
           clientSecret: secret('client-secret'),
-          identifiers: ['company.com'],
-          issuerUrl: 'https://login.microsoftonline.com/<tenant>c/v2.0',
-          scopes: ['openid', 'email', 'profile'],
+          issuerUrl: 'dev-p5wf8g1cx6105qim.us.auth0.com',
         },
       ],
-      logoutUrls: [
-        'http://localhost:4200',
-        'https://app.productbycompany.com',
-        'https://dev.productbycompany.com',
-      ],
+      logoutUrls: ['http://localhost:3000/', 'https://mywebsite.com'],
       callbackUrls: [
-        'http://localhost:4200',
-        'https://app.productbycompany.com',
-        'https://dev.productbycompany.com',
+        'http://localhost:3000/profile',
+        'https://mywebsite.com/profile',
       ],
     },
   },
