@@ -13,7 +13,7 @@ export const auth = defineAuth({
           name: 'Auth0',
           clientId: secret('client-id'),
           clientSecret: secret('client-secret'),
-          issuerUrl: 'dev-p5wf8g1cx6105qim.us.auth0.com',
+          issuerUrl: 'https://dev-p5wf8g1cx6105qim.us.auth0.com',
         },
       ],
       logoutUrls: ['http://localhost:3000/', 'https://mywebsite.com'],
